@@ -95,7 +95,6 @@ class GardenFragment : Fragment() {
     }
 
     private fun adapterOnClick(plant: Plant) {
-        println(plant)
         val navController = this.findNavController()
         val bundle = Bundle()
         bundle.putInt("plantId", plant.id)

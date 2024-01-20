@@ -28,7 +28,11 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        val titleView: TextView = binding.titleHome
         val textView: TextView = binding.textHome
+        homeViewModel.title.observe(viewLifecycleOwner) {
+            titleView.text = it
+        }
         homeViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
